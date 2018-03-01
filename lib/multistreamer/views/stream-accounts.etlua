@@ -2,6 +2,20 @@
 
 <% render('multistreamer.views.stream-menu', { active_submenu = 'accounts' }) %>
 
+
+<div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" class="collapsed">Enable/Disable Accounts</a>
+        </h4>
+      </div>
+
+<div id="collapse1" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+
+
+
+
 <form class="pure-form pure-form-aligned" id="the_form" method="post" action="<%= url_for('stream-edit') %><% if stream then %>/<%= stream.id %><% end %>?subset=accounts" enctype="multipart/form-data">
 
 <fieldset>
@@ -16,6 +30,24 @@
 
 </fieldset>
 
+</div>
+</div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" class="collapsed">Add New Stream Accounts</a>
+        </h4>
+      </div>
+
+<div id="collapse2" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+
+
+
+
+
+
 <fieldset>
 <legend>Add new account</legend>
 <% for k,v in networks() do %>
@@ -25,12 +57,20 @@
 <p><a href="<%= url_for('account-'..v.name) %>?stream=<%= stream.id %>"><%= v.displayname %></a></p>
 <% end %>
 <% end %>
-</fieldset>
 
 <div class="pure-controls">
 <input class="pure-button pure-button-primary" type="submit" value="Save" id="submitBtn" />
 </div>
 
+
+</fieldset>
+
+
 </form>
 
 <% render('multistreamer.views.stream-functions', { active_submenu = 'accounts' }) %>
+
+</div>
+</div>
+</div>
+

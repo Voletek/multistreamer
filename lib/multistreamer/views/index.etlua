@@ -22,7 +22,9 @@
 <% end %>
 <li><a href="<%= url_for('stream-edit')%>">Create new stream</a></li>
 </ul>
+</div>
 
+<div class="wrapper">
 
 <h3>Accounts</h3>
 
@@ -63,7 +65,9 @@
 <% end %>
 
 </ul>
+</div>
 
+<div class="wrapper">
 <h3>IRC Info</h3>
 <p>Hostname: <%= public_irc_hostname %></p>
 <p>Port: <%= public_irc_port %></p>

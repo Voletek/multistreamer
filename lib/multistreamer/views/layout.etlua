@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>multistreamer</title>
+  <title>DuckSquad Gaming</title>
   <link rel="stylesheet" href="<%= url_for("site-root") %>static/css/pure-min.css">
+  <link rel="stylesheet" href="<%= url_for("site-root") %>static/css/bootstrap.min.css"> 
   <link rel="stylesheet" href="<%= url_for("site-root") %>static/css/multistreamer.css">
+  <script src="<%= url_for("site-root") %>static/js/jquery.min.js"></script>
+  <script src="<%= url_for("site-root") %>static/js/bootstrap.min.js"></script>
+
 </head>
 <body>
   <div class="pure-g header">
   <div class="pure-u-1 title">
-  <h1><a href="<%= url_for("site-root") %>">multistreamer</a></h1>
+  <h1><a href="<%= url_for("site-root") %>">DuckSquad Gaming</a></h1>
   <p><% if user then %>Logged in as <%= user.username %> (<a href="<%= url_for('profile-edit',{ id = user.id })%>">Profile</a>) (<a href="<%= url_for('logout') %>">Logout</a>)<% end %></p>
   </div>
   </div>
