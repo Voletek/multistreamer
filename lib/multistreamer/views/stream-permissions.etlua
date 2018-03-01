@@ -2,6 +2,17 @@
 
 <% render('multistreamer.views.stream-menu', { active_submenu = 'permissions' }) %>
 
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Shared User Permissions</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+
+
+
 <form class="pure-form pure-form-aligned" id="the_form" method="post" action="<%= url_for('stream-edit', { id = stream.id }) %>?subset=permissions" enctype="multipart/form-data">
 
 <% for _,other_user in pairs(users) do %>
@@ -23,7 +34,12 @@
 <option value="2" <% if other_user.metadata_level == 2 then %>selected<% end %>>Edit Metadata</option>
 </select>
 </div>
+</fieldset>
+
 <% end %>
+
+
+
 
 <div class="pure-controls">
 <input class="pure-button pure-button-primary" type="submit" id="submitBtn" value="Save" />
@@ -31,3 +47,8 @@
 </form>
 
 <% render('multistreamer.views.stream-functions', { active_submenu = 'permissions' }) %>
+
+
+</div>
+</div>
+</div>

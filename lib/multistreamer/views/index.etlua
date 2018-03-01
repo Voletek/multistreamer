@@ -1,3 +1,13 @@
+  <div class="panel-group" id="accordion">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Create Streams</a>
+        </h4>
+      </div>
+      <div id="collapse1" class="panel-collapse collapse in">
+
+
 <h3>Streams</h3>
 <ul>
 <% if #streams == 0 then %>
@@ -22,9 +32,19 @@
 <% end %>
 <li><a href="<%= url_for('stream-edit')%>">Create new stream</a></li>
 </ul>
+
+</div>
 </div>
 
-<div class="wrapper">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Add/Delete/Share Accounts</a>
+        </h4>
+      </div>
+      <div id="collapse2" class="panel-collapse collapse">
+
 
 <h3>Accounts</h3>
 
@@ -65,12 +85,27 @@
 <% end %>
 
 </ul>
+
+</div>
 </div>
 
-<div class="wrapper">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">IRC Chat Information</a>
+        </h4>
+      </div>
+      <div id="collapse3" class="panel-collapse collapse">
+
+
+
 <h3>IRC Info</h3>
 <p>Hostname: <%= public_irc_hostname %></p>
 <p>Port: <%= public_irc_port %></p>
 <p>SSL: <%= public_irc_ssl and 'Enabled' or 'Disabled' %></p>
 <p><a href="irc<%= public_irc_ssl and 's' or ''%>://<%=public_irc_hostname%>:<%=public_irc_port %>/,needpass">Login</a></p>
 
+</div>
+</div>
+</div>
