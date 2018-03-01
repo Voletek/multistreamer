@@ -993,9 +993,12 @@ app:match('stream-video', config.http_prefix .. '/stream/:id/video(/:fn)', respo
   end,
   GET = function(self)
     local fn = self.params.fn or 'index.m3u8'
+<<<<<<< HEAD
    
    
    
+=======
+>>>>>>> f958d02200913a3be31845cf6059bd78b69c5093
 
     local res = capture(config.http_prefix .. '/video_raw/' .. self.stream.uuid .. '/' .. fn)
     if res then
